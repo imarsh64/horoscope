@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Zodiac</title>
+    <script>
+      function fortune(){
+        var month = document.getElementById("month").value;
+        var day = document.getElementById("day").value;
+        if((month == 1 && day>=20 && day<=31) || (month==2 && day<=18) ){
+          var message = "Aquarius: loyal, freindly, and independent";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'aquarius.png'>"
+        }else if ((month == 2 && day>=19 && day<=29)||(month==3 && day<=20)){
+          var message = "Pisces: sensitive, kind, and imaginative";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'pisces.png'>"
+        } else if ((month==3 && day>=21 && day<=31)||(month==4 && day<=19)){
+          var message = "Aries: impulsive, courageous, and confident";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'aries.png'>"
+        } else if ((month==4 && day>=20 && day<=30)||(month==5 && day<=20)){
+          var message = "Taurus: loving, persistent, and reliable";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'taurus.png'>"
+        } else if((month==5 && day>=21 && day<=31)||(month==6 && day<=20)){
+          var message = "Gemini: witty, lively, and intellecual";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'gemini.png'>"
+        }else if ((month==6 && day>=21 && day<=30)||(month==7 && day<=20)){
+          var message = "Cancer: loving, imaginative, and cautious";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'cancer.png'>"
+        } else if((month==7 && day>=23 && day<=31)||(month==8 && day<=20)){
+          var message = "Leo: creative, faithful, and generous";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'leo.png'>"
+        }else if ((month==8 && day>=23 && day<=31)||(month==9 && day<=22)){
+          var message = "Virgo: shy, modest, and practical";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'virgo.png'>"
+        } else if((month==9 && day>=23 && day<=30)||(month==10 && day<=20)){
+          var message = "Libra: Idealistic, sociable, and charming";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'libra.png'>"
+        }else if ((month==10 && day>=23 && day<=31)||(month==11 && day<=20)){
+          var message = "Scorpio: determined, passionate, and exciting";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'scorpio.png'>"
+        } else if((month==11 && day>=22 && day<=30)||(month==12 && day<=20)){
+          var message = "Sagittarius: honest, philosophical, and good-humored";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'sagittarius.png'>"
+        }else if ((month == 12 && day >= 22 && day<=31)||(month==1 && day<=20)){
+          var message = "Capricorn: Patient, ambitious, and reserved";
+          document.getElementById("output").innerHTML = message;
+          document.getElementById("symbol").innerHTML = "<img src = 'capricorn.png'>"
+        }
+      }
+    </script>
+    <style>
+      img{
+        height: 50px;
+        width: 50px;
+      }
+      *{
+        text-align: center;
+      }
+      input[type=text]{
+        padding: 12px 20px;
+        width: 85px;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+      input:focus[type=text]{
+        border-color: lightblue;
+        border-radius: 8px;
+      }
+      input:hover[type=text]{
+        background-color: #dfdfdf;
+      }
+      input[type=button]{
+        width: 85px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      body{
+        background-image: url(background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        font-size: 25px;
+        font-family: cursive;
+      }
+      hr{
+        border: 4px dashed white;
+      }
+      h2{
+        font-size: 40px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-family: cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Horoscope</h2>
+    <input id="month" type = "text" placeholder="Month">
+    <input id="day" type = "text" placeholder="Day">
+    <input type = "button" value = "SUBMIT" onclick = "fortune()">
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <span id="symbol"></span>
+    <br>
+    <br>
+    <span id="output"></span>
+  </body>
+</html>
